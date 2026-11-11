@@ -23,7 +23,7 @@ jobs:
 
       - name: Compile C++ menjadi EXE
         shell: msys2 {0}
-        run: g++ main.cpp -o program.exe
+        run: g++ main.cpp -o program.exe -static -static-libgcc -static-libstdc++
 
       - name: Upload File EXE
         uses: actions/upload-artifact@v4
